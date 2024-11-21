@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Work({ todo }) {
+function Work({ todo, index, deltodo }) {
   return (
     <div className="todo-item">
-      <p>{todo}</p>
       <input type="checkbox" />
-      <button>X</button>
+      <p>{todo}</p>
+      <button onClick={() => deltodo(index)}>X</button>
+
     </div>
   );
 }

@@ -1,15 +1,15 @@
 import React from 'react';
-import Work from './work'; // Import the Work component
+import Work from './work';
 
-function TodoComponent({ todo }) {
+export default function Todocompnt({ todo, deltodo}) {
   return (
     <div className="todo">
       {todo.map((item, index) => (
-        <Work key={index} todo={item} /> // Render each item using the Work component
+        <Work key={index} todo={item} index={index} deltodo={deltodo} />
       ))}
     </div>
   );
 }
 
-export default TodoComponent;
+
 
